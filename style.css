@@ -1,0 +1,234 @@
+:root{
+    --heading: rgb(0,0,0);
+    --subhead:rgb(29, 29, 31);
+    --callout:rgb(110, 110, 115);
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border: 0;
+}
+.theme-dark{
+    --heading:rgb(255,255,255);
+    --subhead:rgb(255,255,255);
+    --callout:rgb(255,255,255);
+}
+
+html,body{
+    display: grid;
+    grid-template-rows: 'main';
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    overflow-x: hidden;
+}
+hr
+{
+display:none;
+}
+.visuallyhidden{
+    display: none;
+}
+i{
+    margin: 5px;
+    padding: 10px;
+}
+.page-container{
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+
+/* ----------------------------nav bar--------------------------------------------*/
+.nav-container{
+    z-index: 10;
+    background-color: rgba(29, 29, 31, 0.968);
+    position:fixed;
+    width: 100vw;
+    height:45px;
+
+}
+.nav-wrapper
+{   
+    display:flex;
+    width: 100%;
+    flex-wrap: nowrap ;
+    margin: auto;
+}
+#nav{
+    display: flex;
+    padding: 3px;
+    margin:0 auto 0;
+}
+.nav-icon{
+    display: flex;
+}
+#menu{
+    display: flex; 
+    margin:5px auto 5px;
+}
+#menu li{
+    display:flex;
+    padding: 5px;
+    margin:0 10px 0;
+}
+#menu li a{
+    display:block;
+    margin: auto;
+    color: #fcf9f9;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 830px){
+#menu{
+    display:none;
+}   
+#nav{
+    width: 98%;
+} 
+.nav-icon{
+    margin-left: auto;
+}
+.enable{
+    display: inline;
+}
+}
+
+/*---------------------------------------units---------------------------------------------- */ 
+.icon{
+    text-decoration: none;
+}
+.module-content{
+    display: flex;
+    flex-direction: column;
+}
+.grid{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: auto auto;
+  }  
+  .unit-wrapper{
+    position: relative;
+    top: 40px;
+    width: 100vw;
+    height:100vh;
+    box-sizing: border-box;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-size:250% 110% ;
+    background-position: bottom;
+  }
+.grid>.unit-wrapper{
+    width: 50vw;
+    height: 100vh;
+    background-size: 50vw 100vh;
+}
+
+.unit-copy-wrapper{
+    text-align: center;
+padding-top: 61px;
+line-height: 1.47059;
+letter-spacing: -0.022em;
+}
+.headline{
+    font-size: 3em;
+    font-weight: 700;
+    color:var(--heading)
+}
+.subhead{
+    font-size: 1.5em;
+    font-weight: 400;
+    color:var(--subhead);
+}
+.callout{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--callout);
+
+
+}
+.cta-links a{
+    font-size: 19px;
+    font-weight: 400;
+
+  color : rgb(0, 102, 204);
+    padding: 10px;
+}
+.gradient{
+    background-color: black;
+    background-size: 100%;
+   background-image:linear-gradient(90deg, #cb1333, #de45c1, #b96be2, #84a9e0, #23d43b, #d0bb08, #eb6d17);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   }
+
+@media only screen and (max-width: 730px){
+    .grid>.unit-wrapper,.unit-wrapper{ 
+        height:70vh;
+        width:100vw;
+        background-size: 100vw 70vh;
+    }
+    .grid{
+        grid-template-columns:auto;
+    }
+
+}
+
+/*----------------------------------------------footer------------------------------------------------*/
+  
+footer{
+    align-self:flex-end;
+    width:80vw;
+    margin: 0 auto 0;
+    justify-content:space-around;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);    
+    }
+.column-section-title-button{
+    display:none;
+
+}
+.column-section-link{
+    text-decoration: none;
+    color:var(--callout);
+    font-size: x-small;
+}    
+@media only screen and (max-width: 830px){  
+    footer{
+        display: block;
+        width:100vw;
+        grid-template-columns: auto;
+    }  
+    .column-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .column-section-title>.column-section-title-text{
+        display:none;
+    }
+    .column-section-title-button{
+        width:98vw;
+        display:flex;
+        height:4vh;
+        background-color:white;        
+    }
+    .column-section-title-icon{
+        margin-left:auto;
+        margin-top:0;
+        padding-top:0;
+    }
+    .column-section-list{
+        display: none;
+    }
+    hr{display:block;
+        border:solid 0.5px grey;
+        width: 96%;
+        color: #FFFF00;
+        height: 1px;  
+    }
+}
