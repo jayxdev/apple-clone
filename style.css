@@ -17,8 +17,9 @@
 }
 
 html,body{
-    display: grid;
-    grid-template-rows: 'main';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     overflow-x: hidden;
 }
@@ -36,7 +37,7 @@ i{
 .page-container{
     height: 100%;
     display: block;
-    position: absolute;
+    top:0;
 }
 
 
@@ -182,9 +183,11 @@ letter-spacing: -0.022em;
 /*----------------------------------------------footer------------------------------------------------*/
   
 footer{
-    align-self:flex-end;
+    z-index:9;
+    float: bottom;
+    justify-content: flex-end;
     width:80vw;
-    margin: 0 auto 0;
+    margin: auto ;
     justify-content:space-around;
     display: grid;
     grid-template-columns: repeat(5,1fr);    
@@ -200,9 +203,12 @@ footer{
 }    
 @media only screen and (max-width: 830px){  
     footer{
+        z-index: 10;
         display: block;
+        bottom: 0;
         width:100vw;
         grid-template-columns: auto;
+        float:bottom;
     }  
     .column-section{
         display: flex;
