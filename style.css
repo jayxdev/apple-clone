@@ -18,10 +18,11 @@
 
 html,body{
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
-    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     overflow-x: hidden;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 hr
 {
@@ -108,7 +109,7 @@ i{
 }
 .grid{
     display: grid;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     grid-template-columns: auto auto;
   }  
@@ -184,10 +185,9 @@ letter-spacing: -0.022em;
   
 footer{
     z-index:9;
-    float: bottom;
-    justify-content: flex-end;
-    width:80vw;
-    margin: auto ;
+    width: 100%;
+    padding: 10px;
+    margin-top:50px;
     justify-content:space-around;
     display: grid;
     grid-template-columns: repeat(5,1fr);    
@@ -203,12 +203,11 @@ footer{
 }    
 @media only screen and (max-width: 830px){  
     footer{
-        z-index: 10;
+        align-self: center;
+        width: 100%;
         display: block;
-        bottom: 0;
-        width:100vw;
         grid-template-columns: auto;
-        float:bottom;
+
     }  
     .column-section{
         display: flex;
@@ -218,7 +217,7 @@ footer{
         display:none;
     }
     .column-section-title-button{
-        width:98vw;
+        width:100%;
         display:flex;
         height:4vh;
         background-color:white;        
@@ -233,7 +232,7 @@ footer{
     }
     hr{display:block;
         border:solid 0.5px grey;
-        width: 96%;
+        width: 98%;
         color: #FFFF00;
         height: 1px;  
     }
